@@ -6,7 +6,7 @@ RUN apk add --update-cache --no-cache \
 ARG SKOPEO_VERSION=1.5.2
 WORKDIR $GOPATH/src/github.com/containers/skopeo
 RUN test -n "${SKOPEO_VERSION}" \
- && git clone --config advice.detachedHead=false --depth 1 --branch "${SKOPEO_VERSION}" \
+ && git clone --config advice.detachedHead=false --depth 1 --branch "v${SKOPEO_VERSION}" \
         https://github.com/containers/skopeo.git .
 RUN mkdir -p /usr/local/share/man/man1 \
  && nix build -f nix \
