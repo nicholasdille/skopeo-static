@@ -39,5 +39,5 @@ RUN mkdir -p /usr/local/share/man/man1 \
  && mv docs/*.1 /usr/local/share/man/man1
 
 FROM scratch AS local
-COPY --from=skopeo /usr/local/bin/skopeo .
+COPY --from=skopeo /usr/local/bin/skopeo ./bin/
 COPY --from=skopeo /usr/local/share/man ./share/man/
