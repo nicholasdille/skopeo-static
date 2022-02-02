@@ -26,7 +26,7 @@ RUN apk add --update-cache --no-cache \
 
 FROM base AS skopeo
 # renovate: datasource=github-releases depName=containers/skopeo
-ARG SKOPEO_VERSION=1.5.2
+ARG SKOPEO_VERSION=1.6.0
 WORKDIR $GOPATH/src/github.com/containers/skopeo
 RUN test -n "${SKOPEO_VERSION}" \
  && git clone --config advice.detachedHead=false --depth 1 --branch "v${SKOPEO_VERSION}" \
