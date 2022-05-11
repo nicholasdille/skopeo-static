@@ -1,4 +1,4 @@
-FROM golang:1.18-alpine3.14@sha256:4051027fbb907dec6d9556303caae74adb8366913812423212d0a544ffc5bb14 AS base
+FROM golang:1.18-alpine3.14@sha256:70ba8ec1a0e26a828c802c76ecfc65d1efe15f3cc04d579747fd6b0b23e1cea5 AS base
 RUN apk add --update-cache --no-cache \
         git \
         make \
